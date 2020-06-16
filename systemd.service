@@ -1,0 +1,8 @@
+[Unit]
+Description = Dispatch Service
+[Service]
+User=roboshop
+ExecStart=/home/roboshop/dispatch/dispatch
+
+[Install]
+WantedBy=multi-user.target
