@@ -3,6 +3,7 @@ Description = Dispatch Service
 [Service]
 User=roboshop
 ExecStart=/home/roboshop/dispatch/dispatch
+SyslogIdentifier=dispatch
 
 [Install]
 WantedBy=multi-user.target
