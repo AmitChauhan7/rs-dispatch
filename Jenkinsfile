@@ -22,7 +22,7 @@ pipeline {
       steps {
         sh '''
           go get -u golang.org/x/lint/golint
-          golint src/main.go
+          ~/go/bin/golint src/main.go
         '''
       }
     }
