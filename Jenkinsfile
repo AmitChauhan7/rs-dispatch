@@ -18,6 +18,15 @@ pipeline {
       }
     }
 
+    stage('Lint Code') {
+      steps {
+        sh '''
+          go get -u golang.org/x/lint/golint
+          golint src/main.go
+        '''
+      }
+    }
+
     stage('Compile COde') {
       steps {
         sh '''
