@@ -12,6 +12,7 @@ pool:
 - task: GoTool@0
   inputs:
     version: '1.14'
+  displayName: INstall GO
 
 
 - task: Go@0
