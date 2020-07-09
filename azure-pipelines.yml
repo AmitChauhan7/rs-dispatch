@@ -12,16 +12,16 @@ pool:
 - task: GoTool@0
   inputs:
     version: '1.14'
-  name: Install GO
+
 
 - task: Go@0
   inputs:
     command: 'get'
     arguments: 'github.com/instana/go-sensor'
-  name: Go Dependencies Instana
+
 
 - task: Go@0
   inputs:
     command: 'get'
     arguments: 'go get github.com/streadway/amqp'
-  name: Go Dependencies Streadway-AMQP
+  name: 
