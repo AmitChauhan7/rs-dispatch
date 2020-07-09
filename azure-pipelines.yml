@@ -27,3 +27,13 @@ steps:
     command: 'get'
     arguments: 'github.com/streadway/amqp'
   displayName: Install GO Dependencies Streadway
+
+- task: Go@0
+  inputs:
+    command: 'get'
+    arguments: 'golang.org/x/lint/golint'
+  displayName: Install GO Dependencies Lint
+
+- script: |
+    ~/go/bin/golint src/main.go
+  displayName: 'Go Lint'
