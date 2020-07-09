@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+steps:
 - task: GoTool@0
   inputs:
     version: '1.14'
@@ -19,10 +20,10 @@ pool:
   inputs:
     command: 'get'
     arguments: 'github.com/instana/go-sensor'
-
+  displayName: INstall GO Dependecies Instana
 
 - task: Go@0
   inputs:
     command: 'get'
     arguments: 'go get github.com/streadway/amqp'
-  name: 
+  displayName: Install GO Dependencies Streadway
