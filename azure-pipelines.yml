@@ -25,5 +25,5 @@ steps:
 - task: Go@0
   inputs:
     command: 'get'
-    arguments: 'go get github.com/streadway/amqp'
+    arguments: 'github.com/streadway/amqp'
   displayName: Install GO Dependencies Streadway
