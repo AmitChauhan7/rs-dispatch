@@ -40,7 +40,6 @@ steps:
 - task: Go@0
   inputs:
     command: 'build'
-    arguments: 'src'
   displayName: 'Go Build'
 - task: CmdLine@2
   inputs:
