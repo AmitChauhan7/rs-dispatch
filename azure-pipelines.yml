@@ -36,3 +36,22 @@ steps:
 - script: |
     ~/go/bin/golint src/main.go
   displayName: 'Go Lint'
+
+- task: Go@0
+  inputs:
+    command: 'build'
+    arguments: 'src'
+  displayName: Install GO Dependencies Lint
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd target
+      mkdir publish
+      cp *depen*.jar publish/shipping.jar
+      cd publish
+      az artifacts universal publish --organization https://dev.azure.com/DevOps-Batches/ --project="DevOps48" --scope project --feed RoboShop --name  $(appName) --version 1.0.$(Build.BuildId) --description "$(appName)" --path .
+  displayName: Publish Artifacts
+
+variables:
+  appName: "dispatch"
