@@ -46,9 +46,8 @@ steps:
   inputs:
     script: |
       cd src
-      ls
       mkdir publish
-      cp *depen*.jar publish/shipping.jar
+      mv src publish/$(appName)
       cd publish
       az artifacts universal publish --organization https://dev.azure.com/DevOps-Batches/ --project="DevOps48" --scope project --feed RoboShop --name  $(appName) --version 1.0.$(Build.BuildId) --description "$(appName)" --path .
   displayName: Publish Artifacts
