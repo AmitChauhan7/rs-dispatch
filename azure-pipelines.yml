@@ -40,7 +40,8 @@ steps:
 - task: Go@0
   inputs:
     command: 'build'
-  displayName: 'Go Build'
+    workingDirectory: 'src'
+
 - task: CmdLine@2
   inputs:
     script: |
