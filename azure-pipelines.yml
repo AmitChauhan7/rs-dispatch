@@ -41,12 +41,12 @@ steps:
   inputs:
     command: 'build'
     arguments: 'src'
-  displayName: Install GO Dependencies Lint
-
+  displayName: 'Go Build'
 - task: CmdLine@2
   inputs:
     script: |
-      cd target
+      cd src
+      ls
       mkdir publish
       cp *depen*.jar publish/shipping.jar
       cd publish
