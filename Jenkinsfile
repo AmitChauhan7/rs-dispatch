@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh '''
                   go get github.com/instana/go-sensor
+                  go get github.com/streadway/amqp
                 '''
             }
         }
