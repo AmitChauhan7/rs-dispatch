@@ -1,2 +1,0 @@
-@Library('roboshop') _
-go()
