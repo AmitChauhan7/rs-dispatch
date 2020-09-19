@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                     cd src
-                    go compile
+                    go build
                 '''
             }
 
