@@ -6,6 +6,14 @@ pipeline {
     }
 
     stages {
+
+        stage ('Install Dependencies'){
+            steps {
+                sh '''
+                  go get github.com/instana/go-sensor
+                '''
+            }
+        }
         stage('Compile Code') {
             steps {
                 sh '''
